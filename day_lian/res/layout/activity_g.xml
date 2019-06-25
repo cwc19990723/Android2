@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <EditText	android:id="@+id/g_zh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="账号"/>
+    
+    <EditText	android:id="@+id/g_mm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="密码"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        
+        <Button android:id="@+id/g_dl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登陆"/>
+        
+        <Button android:id="@+id/g_zc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

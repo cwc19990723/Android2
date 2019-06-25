@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/sk_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入姓名" />
+    
+    <TextView android:id="@+id/sk_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="18" />
+    
+    <TextView android:id="@+id/sk_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="男" />
+    
+    <TextView android:id="@+id/sk_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="女" />
+    
+    <TextView android:id="@+id/sk_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="北小营" />
+
+</LinearLayout>

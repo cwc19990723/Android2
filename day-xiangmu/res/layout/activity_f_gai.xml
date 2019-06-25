@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <ImageButton	android:id="@+id/fgai_an1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zuo"/>
+    
+    <EditText 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="		登陆时的账号不可编辑"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/xing"/>
+    
+    <EditText 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="		输入旧密码"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/xing"/>
+    
+    <EditText 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="		输入新密码"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/xing"/>
+    
+    <Button android:id="@+id/fgai_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

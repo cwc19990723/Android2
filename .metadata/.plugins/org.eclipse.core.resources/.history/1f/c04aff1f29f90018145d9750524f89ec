@@ -1,0 +1,62 @@
+package com.example.day12_0;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		final ImageView i_tu = (ImageView) findViewById(R.id.i_tu);
+		
+		final String [] imgs = {
+				"http://192.168.1.14:8080/test1/timg1.jpg",
+				"http://192.168.1.14:8080/test1/timg2.jpg",
+				"http://192.168.1.14:8080/test1/timg3.jpg"
+		};
+		//给按钮设置转跳
+		Button i_an = (Button) findViewById(R.id.i_an);
+		
+		i_an.setOnClickListener(new OnClickListener() {
+			int i = 0;
+			@Override
+			public void onClick(View v) {
+				//2.开启异步任务类,加载网络图片
+				new  ImageLoadTask(i_tu).execute(imgs[i%3]);
+				
+			}
+		});
+	}
+	
+	class ImageLoadTask extends AsyncTask<String, Void, Bitmap>{
+		
+		
+		
+		
+		
+		
+
+		public ImageLoadTask(ImageView i_tu) {
+		}
+
+		@Override
+		protected Bitmap doInBackground(String... params) {
+			return null;
+		}
+		
+		
+		
+	}
+	
+}

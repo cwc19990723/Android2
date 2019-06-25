@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
+    
+    <EditText android:id="@+id/up_ed1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要修改的标题"
+        android:layout_marginTop="10dp"/>
+    
+    <EditText android:id="@+id/up_ed2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要修改的内容"
+        android:layout_marginTop="10dp"/>
+    
+    <Button android:id="@+id/up_ok"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="ok"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView android:id="@+id/fan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="返回"
+     	android:drawableLeft="@drawable/zup"
+     	/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="登陆"
+        android:textSize="20dp" 
+        android:layout_marginBottom="50dp"/>
+    
+    <TextView android:id="@+id/huan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="欢迎来到积云教育"
+        android:layout_below="@id/fan"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        />
+    
+    <EditText android:id="@+id/yhm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户名"
+        android:layout_below="@id/huan"
+        />
+    
+    <EditText android:id="@+id/mm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="密码"
+        android:layout_below="@id/yhm"
+        />
+    
+    <Button android:id="@+id/dl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:layout_below="@id/mm"
+        />
+    
+    <TextView android:id="@+id/wjmm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码?"
+        android:textSize="16sp"
+        android:layout_below="@id/dl"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="80dp"
+        />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:layout_marginRight="80dp"
+        android:textSize="16sp"
+        android:layout_below="@id/dl"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        />
+    
+</RelativeLayout>

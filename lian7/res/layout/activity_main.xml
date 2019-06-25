@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <TextView	android:id="@+id/a_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="商品信息"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:background="#3B75A9"
+        />
+    
+    <Button android:id="@+id/a_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加"
+        android:layout_alignParentRight="true"/>
+    
+    <ListView android:id="@+id/a_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/a_tv"/>
+
+</RelativeLayout>

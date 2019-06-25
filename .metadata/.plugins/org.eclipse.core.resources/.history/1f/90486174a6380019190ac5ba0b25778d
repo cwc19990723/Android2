@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText android:id="@+id/log_zh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入账号" />
+    
+    <EditText android:id="@+id/log_mm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码" />
+    
+    <CheckBox android:id="@+id/log_jzmm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="记住密码"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

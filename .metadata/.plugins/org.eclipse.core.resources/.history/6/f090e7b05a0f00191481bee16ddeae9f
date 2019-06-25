@@ -1,0 +1,26 @@
+package com.example.day11_zuo;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+public class UpdateActivity extends Activity {
+
+	private EditText ed1;
+	private EditText ed2;
+	private EditText ed3;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_update);
+		
+		ed1 = (EditText) findViewById(R.id.up_ed1);
+		ed2 = (EditText) findViewById(R.id.up_ed2);
+		ed3 = (EditText) findViewById(R.id.up_ed3);
+		
+	}
+}

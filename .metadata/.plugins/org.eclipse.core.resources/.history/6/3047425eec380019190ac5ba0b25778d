@@ -1,0 +1,113 @@
+package com.example.viewpager;
+
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.Gson;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.TextView;
+import bean.Ccc;
+import bean.data;
+import bean.datas;
+
+public class DActivity extends Activity {
+	
+	private ArrayList<datas> list;
+	private MyAdapter adapter;
+	
+	Handler hand = new Handler(){
+		public void handleMessage(Message msg) {
+			list = (ArrayList<datas>) msg.obj;
+			adapter = new MyAdapter(list, DActivity.this);
+			lv.setAdapter(adapter);
+		};
+	};
+
+	private TextView tv;
+	private ListView lv;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_d);
+		
+		//数据库插入方法
+		MySql sql = new MySql(DActivity.this);
+		for (int i = 0; i < 10; i++) {
+			sql.insert(new datas("", "这是标题", "这是内容"));
+		}
+		
+		initView();
+		initData();
+		
+		
+		//网络解析
+		/*new Thread(){
+			public void run() {
+				try {
+					URL url = new URL("http://www.wanandroid.com/article/list/1/json");
+					HttpURLConnection con = (HttpURLConnection) url.openConnection();
+					int code = con.getResponseCode();
+					if(code==200){
+						InputStream in = con.getInputStream();
+						StringBuffer sb = new StringBuffer();
+						byte [] by = new byte [1024];
+						int a = 0;
+						while ((a=in.read(by))!=-1) {
+							sb.append(new String(by,0,a));
+						}
+						
+						Gson gson = new Gson();
+						Ccc ccc = gson.fromJson(sb.toString(), Ccc.class);
+						data data = ccc.getData();
+						List<datas> list = data.getDatas();
+						
+						Message msg = new Message();
+						msg.obj = list;
+						hand.sendMessage(msg);
+					}
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			};
+		}.start();*/
+		
+		//数据库
+		
+	}
+
+	private void initView() {
+			tv = (TextView) findViewById(R.id.d_tv);
+		
+			Intent in = getIntent();
+			String name = in.getStringExtra("z");
+			tv.setText("欢迎 :"+name);
+		
+			lv = (ListView) findViewById(R.id.lv_lv);
+		
+	}
+	
+	private void initData() {
+				//数据库查询方法存入到Arraylist集合中
+				ArrayList<datas> list2 = new MySql(DActivity.this).select();
+				list.addAll(list2);
+				adapter.notifyDataSetChanged();
+	}
+	
+}

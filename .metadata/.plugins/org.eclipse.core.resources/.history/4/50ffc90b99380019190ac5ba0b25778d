@@ -1,0 +1,31 @@
+package com.example.viewpager;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+
+public class MainActivity extends Activity {
+	
+	private ViewPager pager;
+	private ArrayList<View> list;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		ViewPager vp = (ViewPager) findViewById(R.id.vp);
+		
+		list = new ArrayList<View>();
+		View view1 = LayoutInflater.from(MainActivity.this).inflate(R.layout.pager1, null);
+		View view2 = LayoutInflater.from(MainActivity.this).inflate(R.layout.pager2, null);
+		View view3 = LayoutInflater.from(MainActivity.this).inflate(R.layout.pager3, null);
+		
+	}
+}

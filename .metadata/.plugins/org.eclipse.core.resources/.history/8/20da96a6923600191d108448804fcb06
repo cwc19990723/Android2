@@ -1,0 +1,54 @@
+package com.example.zhou3;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+
+public class Denglu extends Activity implements OnClickListener {
+
+	private Button dl;
+	private Button zc;
+	private EditText dl_zh;
+	private EditText dl_mm;
+	private CheckBox jzmm;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_denglu);
+		
+		dl = (Button) findViewById(R.id.dl_dl);
+		zc = (Button) findViewById(R.id.dl_zc);
+		dl_zh = (EditText) findViewById(R.id.dl_zh);
+		dl_mm = (EditText) findViewById(R.id.dl_mm);
+		jzmm = (CheckBox) findViewById(R.id.dl_jzmm);
+		
+		SharedPreferences sp = getSharedPreferences("user", MODE_PRIVATE);
+		boolean boolean1 = sp.getBoolean("issave", false);
+		if(boolean1){
+			String user = sp.getString("z", "");
+			String psw = sp.getString("m", "");
+			
+			dl_zh.setText(user);
+			dl_mm.setText(psw);
+		}
+		jzmm.setChecked(boolean1);
+		
+		dl.setOnClickListener(this);
+	}
+
+	@Override
+	public void onClick(View v) {
+		
+	}
+	
+	
+	
+}

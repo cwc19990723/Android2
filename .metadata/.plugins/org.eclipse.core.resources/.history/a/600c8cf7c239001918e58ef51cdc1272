@@ -1,0 +1,25 @@
+package com.example.lianxi2;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class Denglu extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_denglu);
+		
+		SharedPreferences sp = getSharedPreferences("user", MODE_PRIVATE);
+		boolean boolean1 = sp.getBoolean("issave", false);
+		if(boolean1){
+			String user = sp.getString("z", "");
+			String psw = sp.getString("m", "");
+			
+		}
+		
+	}
+}

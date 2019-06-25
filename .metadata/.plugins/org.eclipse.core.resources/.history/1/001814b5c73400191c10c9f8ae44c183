@@ -1,0 +1,74 @@
+package com.example.day_14_sql;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class MySql extends SQLiteOpenHelper{
+
+	public MySql(Context context) {
+		super(context, "my.db", null, 2);
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		
+		String sql = "create table h1809a(id integer primary key autoincrement,name,age,sex)";
+		
+		db.execSQL(sql);
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		
+	}
+	
+	//插入数据库的方法
+	public void insert(User s){
+		String sql = "insert into h1809a(name,age,sex) values(?,?,?)";
+		SQLiteDatabase db = getWritableDatabase();
+		db.execSQL(sql,new Object[]{s.getName(),s.getAge(),s.getSex()});
+	}    
+	//第一种删除
+	public void delete(String name){
+		String sql = "delect from h1809a where name=?";
+		SQLiteDatabase db = getWritableDatabase();
+		db.execSQL(sql,new Object[]{name});
+	}
+	
+	//第二种
+	public void delete1(String name){
+		SQLiteDatabase db = getWritableDatabase();
+		db.delete("h1809a", "name=?", new String[]{name});
+	}
+	
+	//修改
+	public void update(){
+		String sql = "update h1809a set age=? where name=?";
+		SQLiteDatabase db = getWritableDatabase();
+		db.update("", values, whereClause, whereArgs)
+	}
+	
+	//查询所有数据
+	public ArrayList<User> select(){
+		
+		String sql = "select * from h1809a";
+		SQLiteDatabase db = getWritableDatabase();
+		Cursor query = db.rawQuery(sql, null);
+		ArrayList<User> list = new ArrayList<User>();
+		while (query.moveToNext()) {
+			int id = query.getInt(query.getColumnIndex("id"));
+			String name = query.getString(query.getColumnIndex("name"));
+			int age = query.getInt(query.getColumnIndex("age"));
+			String sex = query.getString(query.getColumnIndex("sex"));
+			list.add(new User(id, name, age, sex));
+		}
+		return list;
+	}
+
+}

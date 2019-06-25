@@ -1,0 +1,39 @@
+package com.example.zhou3;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.annotation.MainThread;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
+import bean.forecast;
+
+public class Listview extends Activity {
+	
+	Handler hand = new Handler(){
+		private ArrayList<forecast> list;
+		private MyAdapter adapter;
+
+		public void handleMessage(android.os.Message msg) {
+			list = (ArrayList<forecast>) msg.obj;
+			adapter = new MyAdapter(list, Listview.this);
+			lv.setAdapter(adapter);
+		};
+	};
+
+	private ListView lv;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_listview);
+		
+		lv = (ListView) findViewById(R.id.lv);
+		
+		
+	}
+}

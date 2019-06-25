@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+   	<LinearLayout 
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:orientation="horizontal">
+   	    
+   	    <TextView 
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        android:text="姓名"
+   	        android:textSize="20sp"
+   	        android:layout_marginLeft="10dp"
+   	        android:layout_marginTop="10dp"/>
+   	    
+   	    <EditText android:id="@+id/a_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zhi"
+            android:layout_marginTop="10dp"/>
+   	    
+   	</LinearLayout>
+   	
+   	<LinearLayout 
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:orientation="horizontal">
+   	    
+   	    <TextView 
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        android:text="年龄"
+   	        android:textSize="20sp"
+   	        android:layout_marginLeft="10dp"
+   	        android:layout_marginTop="10dp"/>
+   	    
+   	    <EditText android:id="@+id/a_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zhi"
+            android:layout_marginTop="10dp"/>
+   	    
+   	</LinearLayout>
+   	
+   	<LinearLayout 
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:orientation="horizontal">
+   	    
+   	    <TextView 
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        android:text="爱好"
+   	        android:textSize="20sp"
+   	        android:layout_marginTop="10dp"
+   	        android:layout_marginLeft="10dp"/>
+   	    
+   	    <CheckBox android:id="@+id/a_lanqiu"
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        android:text="篮球"
+   	        android:checked="true"
+   	        android:layout_marginTop="10dp"/>
+   	    
+   	    <CheckBox android:id="@+id/a_zuqiu"
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        android:text="足球"
+   	        android:layout_marginTop="10dp"/>
+   	    
+   	    <CheckBox android:id="@+id/a_paiqiu"
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        android:text="排球"
+   	        android:layout_marginTop="10dp"/>
+   	    
+   	</LinearLayout>
+   	
+   	<RadioGroup android:id="@+id/a_sex"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:orientation="horizontal">
+   	    
+   	    <TextView 
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        android:text="性别"
+   	        android:textSize="20sp"
+   	        android:layout_marginLeft="10dp"
+   	        android:layout_marginTop="10dp"/>
+   	    
+   	    <RadioButton android:id="@+id/a_nan"
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        android:text="男"
+   	        android:checked="true"
+   	        android:layout_marginTop="10dp"/>
+   	    
+   	    <RadioButton android:id="@+id/a_nv"
+   	        android:layout_width="wrap_content"
+   	        android:layout_height="wrap_content"
+   	        android:text="女"
+   	        android:layout_marginTop="10dp"/>
+   	    
+   	</RadioGroup>
+   	
+   	<Button android:id="@+id/a_zhuce"
+   	    android:layout_width="100dp"
+   	    android:layout_height="wrap_content"
+   	    android:text="确认"
+   	    android:layout_gravity="center_horizontal"
+   	    android:layout_marginTop="10dp"
+   	    />
+    
+</LinearLayout>

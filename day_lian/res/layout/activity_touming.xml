@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <SeekBar android:id="@+id/tou_sb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="30"/>
+        
+        <TextView android:id="@+id/tou_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_alignRight="@id/tou_sb"/>
+        
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        
+        <Button android:id="@+id/tou_jia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="减少"/>
+        
+        <Button android:id="@+id/tou_jian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增加"/>
+        
+    </LinearLayout>
+    
+    <ImageView android:id="@+id/tou_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ys"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+package com.example.day_14_sql;
+
+import java.util.List;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class MySql extends SQLiteOpenHelper{
+
+	public MySql(Context context) {
+		super(context, "my.db", null, 2);
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		
+		String sql = "create table h1809a(id integer primary key autoincrement,name,age,sex)";
+		
+		db.execSQL(sql);
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		
+	}
+	
+	//插入数据库的方法
+	public void insert(User s){
+		String sql = "insert into h1809a(name,age,sex) values(?,?,?)";
+		SQLiteDatabase db = getWritableDatabase();
+		db.execSQL(sql,new Object[]{s.getName(),s.getAge(),s.getSex()});
+	}    
+	//第一种删除
+	public void delete(String name){
+		String sql = "delect from h1809a where name=?";
+		SQLiteDatabase db = getWritableDatabase();
+		db.execSQL(sql,new Object[]{name});
+	}
+	
+	//第二种
+	public void delete1(String name){
+		SQLiteDatabase db = getWritableDatabase();
+		db.delete("h1809a", "name=?", new String[]{name});
+	}
+	
+	//查询所有数据
+	public List<User> select(){
+		
+		String sql = "select * from h1809a";
+		SQLiteDatabase db = getWritableDatabase();
+		
+		return null;
+		
+	}
+
+}

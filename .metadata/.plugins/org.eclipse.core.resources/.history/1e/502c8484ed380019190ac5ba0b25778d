@@ -1,0 +1,32 @@
+package com.example.time;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	
+	private int count = 0;
+	
+	Handler hand = new Handler(){
+		public void handleMessage(android.os.Message msg) {
+			
+		};
+	};
+
+	private TextView tv;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		tv = (TextView) findViewById(R.id.tm_tv);
+		
+		
+	}
+}

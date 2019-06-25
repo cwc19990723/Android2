@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp">
+        
+        <Button android:id="@+id/c_jia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增加"/>
+        
+        <Button android:id="@+id/c_jian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="减少"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        
+        <ProgressBar android:id="@+id/c_pg"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal"
+           	android:max="100"
+           	android:progress="20"
+            />
+        
+        <TextView android:id="@+id/c_tv"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center_horizontal"
+            />
+        
+    </LinearLayout>
+
+</LinearLayout>

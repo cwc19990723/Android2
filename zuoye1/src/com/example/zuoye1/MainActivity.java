@@ -1,0 +1,105 @@
+package com.example.zuoye1;
+
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.alibaba.fastjson.JSON;
+import com.google.gson.Gson;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ListView;
+import bean.User;
+import bean.data;
+import bean.datas;
+
+public class MainActivity extends Activity implements OnClickListener {
+	
+	private ListView lv;
+	private Button insert;
+	private Button select;
+	private ArrayList<datas> list;
+	private MyAdapter adapter;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		lv = (ListView) findViewById(R.id.lv);
+		insert = (Button) findViewById(R.id.bt_insert);
+		select = (Button) findViewById(R.id.bt_select);
+		
+		list = new ArrayList<datas>();
+		adapter = new MyAdapter(list, MainActivity.this);
+		lv.setAdapter(adapter);
+		
+		insert.setOnClickListener(this);
+		select.setOnClickListener(this);
+		
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.bt_insert:
+			new Thread(){
+				public void run() {
+					try {
+						URL url = new URL("http://192.168.1.52:8080/test1/hw.txt");
+						HttpURLConnection con = (HttpURLConnection) url.openConnection();
+						int code = con.getResponseCode();
+						if(code==200){
+							InputStream in = con.getInputStream();
+							StringBuffer sb = new StringBuffer();
+							byte [] by = new byte[1024];
+							int a = 0;
+							while ((a=in.read(by))!=-1) {
+								sb.append(new String(by,0,a,"gbk"));
+							}
+							Log.i("msg", "msg"+sb.toString());
+							
+							/*User user = JSON.parseObject(sb.toString(),User.class);
+							data data = user.getData();
+							List<datas> list = data.getDatas();*/
+							
+							Gson gson = new Gson();
+							User user = gson.fromJson(sb.toString(), User.class);
+							data data = user.getData();
+							List<datas> list = data.getDatas();
+							
+							for (datas datas : list) {
+								new MySql(MainActivity.this).insert(datas);
+							}
+						}   
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				};
+			}.start();  
+			break;
+		case R.id.bt_select:
+			ArrayList<datas> list2 = new MySql(MainActivity.this).select();
+			list.addAll(list2);
+			adapter.notifyDataSetChanged();
+			break;
+
+		default:
+			break;
+		}
+	}
+	
+}

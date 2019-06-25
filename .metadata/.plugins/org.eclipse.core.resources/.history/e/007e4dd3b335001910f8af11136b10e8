@@ -1,0 +1,45 @@
+package com.example.lian_lian;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class MySql extends SQLiteOpenHelper{
+
+	public MySql(Context context) {
+		super(context, "my.db", null, 2);
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		String sql = "create table user (name,age,sex) valyes (?,?,?)";
+		db.execSQL(sql);
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		
+	}
+	//Ôö
+	public void insert(User s){
+		String sql = "insert into user(name,age,sex) values (?,?,?)";
+		SQLiteDatabase db = getWritableDatabase();
+		db.execSQL(sql,new Object[]{s.getName(),s.getAge(),s.getSex()});
+	}
+	
+	//É¾³ý
+	public void delete(User s){
+		String sql = "delect from user where name=?";
+		SQLiteDatabase db = getWritableDatabase();
+		db.execSQL(sql,new Object[]{s.getName()});
+	}
+	
+	//¸Ä
+	public void uodate(User s){
+		String sql = "update user set name=? age=? sex=?";
+		SQLiteDatabase db = getWritableDatabase();
+		db.execSQL(sql,new Object[]{s.getName(),s.getAge(),s.getSex()});
+	}
+	
+}

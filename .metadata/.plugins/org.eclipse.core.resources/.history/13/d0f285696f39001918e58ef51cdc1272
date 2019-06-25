@@ -1,0 +1,32 @@
+package com.example.lian_donghua;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
+public class Socked extends Activity {
+
+	private TextView sk_name;
+	private TextView sk_age;
+	private TextView sk_nan;
+	private TextView sk_nv;
+	private TextView sk_address;
+	private RatingBar sk_rb;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_socked);
+		
+		sk_name = (TextView) findViewById(R.id.sk_name);
+		sk_age = (TextView) findViewById(R.id.sk_age);
+		sk_nan = (TextView) findViewById(R.id.sk_nan);
+		sk_nv = (TextView) findViewById(R.id.sk_nv);
+		sk_address = (TextView) findViewById(R.id.sk_address);
+		sk_rb = (RatingBar) findViewById(R.id.rb);
+	}
+}

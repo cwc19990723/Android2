@@ -1,0 +1,62 @@
+package com.example.lianxi1;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.GridView;
+
+public class BActivity extends Activity implements OnItemClickListener {
+
+	private GridView lv;
+	private ArrayList<User> list;
+	private MyAdapter adapter;
+	private int index;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_b);
+		
+		MySql sql = new MySql(BActivity.this);
+		for (int i = 0; i<10; i++) {
+			sql.insert(new User("www.baidu.com", "xunÅíÌÎ"));
+		}
+		initView();
+		
+	}
+
+	private void initView() {
+		lv = (GridView) findViewById(R.id.lv);
+		
+		list = new ArrayList<User>();
+		adapter = new MyAdapter(list, BActivity.this);
+		lv.setAdapter(adapter);
+		
+		initData();
+		
+		lv.setOnItemClickListener(this);
+	}
+
+	private void initData() {
+		ArrayList<User> list2 = new MySql(BActivity.this).select();
+		list.addAll(list2);
+		adapter.notifyDataSetChanged();
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		
+		
+		
+	}
+	
+	
+	
+}

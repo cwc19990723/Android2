@@ -1,0 +1,176 @@
+package com.example.day11_zuo;
+
+import java.io.InputStream;
+import java.io.Serializable;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ListView;
+
+public class CActivity extends Activity implements OnClickListener, OnItemLongClickListener, OnItemClickListener {
+
+	private ListView lv;
+	private ListView jia;
+	private int index =0;//下标从0开始
+	private MyAdapter adapter;
+	
+	Handler handler =  new Handler(){
+		
+		public void handleMessage(Message msg) {
+			//接受子线程发送的数据
+			ArrayList<User> list = (ArrayList<User>) msg.obj;
+			//创建适配器
+			adapter = new MyAdapter(CActivity.this, list);
+			//绑定适配器
+			lv.setAdapter(adapter);
+		};
+	};
+	private ArrayList<User> list;
+	private AlertDialog alertDialog;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_c);
+		
+		new Thread(){
+			public void run() {
+				try {
+					URL url = new URL("http://192.168.1.52:8080/test1/json.txt");
+					HttpURLConnection con = (HttpURLConnection) url.openConnection();
+					int er = con.getResponseCode();
+					if(er==200){
+						InputStream in = con.getInputStream();
+						StringBuffer sb = new StringBuffer();
+						byte [] by = new byte [1024];
+						int a =0;
+						while ((a=in.read(by))!=-1) {
+							sb.append(new String(by,0,a,"gbk"));
+						}
+						Log.i("Main", sb.toString());
+						
+						ArrayList<User> list = JSON.parseObject(sb.toString(), new TypeReference<ArrayList<User>>(){});
+						
+						//Message封装数据发送到上面
+						Message msg = new Message();
+						msg.obj = list;
+						
+						handler.sendMessage(msg);
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			};
+		}.start();
+		
+		list = new ArrayList<User>();
+		for (int i = 0; i < 10; i++) {
+			if(i%2==0){
+				list.add(new User("www.baidu.com", "地址", "内容"));
+			}else {
+				list.add(new User("www.177.com", "位置", "信息"));
+			}
+		}
+		
+		lv = (ListView) findViewById(R.id.c_lv);
+		//jia = (ListView) findViewById(R.id.c_jia);
+		
+		lv.setOnItemLongClickListener(this);
+		lv.setOnItemClickListener(this);
+		//jia.setOnClickListener(this);
+		
+		alertDialog = new AlertDialog.Builder(this).setTitle("是否删除")
+		.setPositiveButton("是", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				//从下标0开始的地方删除
+				list.remove(index);
+				//刷新适配器
+				adapter.notifyDataSetChanged();
+			}
+		})
+		.setNegativeButton("否", null).create();
+		
+	}
+	
+	/*//设置添加事件
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.c_jia://添加事件
+			Intent intent = new Intent(CActivity.this,AddActivity.class);
+			startActivityForResult(intent, 1);
+			break;
+
+		default:
+			break;
+		}
+	}
+	//接受数据
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		//接受添加的请求码和结果码
+		if(requestCode==1&&resultCode==2){
+			//添加数据
+			User jia = (User) data.getSerializableExtra("add");
+			//添加的集合
+			list.add(jia);
+			//将修改的数据回传后刷新适配器显示数据
+			adapter.notifyDataSetChanged();
+		}
+		
+		//修改
+		if(requestCode==3&&resultCode==4){
+			//接收回传后的数据
+			User upuser = (User) data.getSerializableExtra("neirong");
+			//修改集合中对应的数据
+			list.set(index, upuser);
+		}
+		//刷新适配器
+		adapter.notifyDataSetChanged();
+	}
+	
+	//长按点击事件
+	@Override
+	public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+		//因为index本身就是0 所以将下标赋值给他就从0开始
+		index = position;
+		//显示弹窗
+		alertDialog.show();
+		return true;
+	}
+	//修改点击事件
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		//记录你要记录的下标
+		index = position;
+		//转跳到修改界面 并且吧修改前的数据携带过去
+		User user = list.get(position);
+		Intent intent = new Intent(CActivity.this,UpdateActivity.class);
+		intent.putExtra("update", user);
+		startActivityForResult(intent, 3);
+	}*/
+}

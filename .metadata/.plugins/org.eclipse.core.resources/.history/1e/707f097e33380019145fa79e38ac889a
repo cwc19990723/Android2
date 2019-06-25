@@ -1,0 +1,52 @@
+package com.example.zhou1;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
+import bean.data;
+
+public class BActivity extends Activity {
+	
+	Handler hand = new Handler(){
+		private ArrayList<data> list;
+		private MyAdapter adapter;
+
+		public void handleMessage(android.os.Message msg) {
+			list = (ArrayList<data>) msg.obj;
+			adapter = new MyAdapter(list, BActivity.this);
+			lv.setAdapter(adapter);
+		};
+	};
+
+	private ListView lv;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_b);
+		
+		lv = (ListView) findViewById(R.id.lv);
+		
+		new Thread(){
+			public void run() {
+				try {
+					URL url = new URL("http://v.juhe.cn/toutiao/index?type=guoji&key=4c4826357bfa9a983038c2a61071f1a5");
+					
+					
+					
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			};
+		}.start();
+	}
+}

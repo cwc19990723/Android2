@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#5665C4">
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改资料"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+        
+        <Button android:id="@+id/ziliao_queren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+        
+    </RelativeLayout>
+    
+    <ImageView android:id="@+id/ziliao_tu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/weixin"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+    
+    <EditText android:id="@+id/ziliao_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="请输入昵称"
+        android:layout_margin="10dp"
+        android:background="@drawable/juxing"/>
+    
+    <RadioGroup 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/juxing"
+        android:layout_margin="10dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别 :"
+            android:textSize="20sp"/>
+        
+        <RadioButton android:id="@+id/ziliao_nan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"/>
+        
+        <RadioButton android:id="@+id/ziliao_nv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"/>
+        
+    </RadioGroup>
+    
+    <EditText android:id="@+id/ziliao_shengri"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="请输入生日"
+        android:layout_margin="10dp"
+        android:background="@drawable/juxing"/>
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择用户等级"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"/>
+    
+    <RatingBar android:id="@+id/ziliao_rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="1"
+        />
+
+</LinearLayout>

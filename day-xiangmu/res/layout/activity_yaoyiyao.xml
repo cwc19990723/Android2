@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    	<ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zuo"/>
+        
+        <TextView android:id="@+id/yao_fanhui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   摇一摇"
+            android:layout_marginLeft="10dp"/>
+        
+        <ImageView android:id="@+id/yao_tu"
+            android:layout_width="500dp"
+            android:layout_height="350dp"
+            android:src="@drawable/zhong"
+            android:layout_centerInParent="true"/>
+        
+        <RadioGroup 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/yao_tu">
+            
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/xuanzeqi"
+                android:text="礼品"
+                android:textSize="20sp"
+                android:button="@null"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"/>
+            
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/xuanzeqi2"
+                android:text="通讯"
+                android:textSize="20sp"
+                android:button="@null"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="20dp"/>
+            
+        </RadioGroup>
+   
+</RelativeLayout>

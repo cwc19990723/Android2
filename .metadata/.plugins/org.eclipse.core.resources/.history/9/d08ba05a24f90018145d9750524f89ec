@@ -1,0 +1,33 @@
+package com.example.day12_0;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+import org.apache.http.params.HttpConnectionParams;
+
+import android.graphics.Bitmap;
+
+public class Http {
+	
+	public static Bitmap ToBitmap(String Httpurl){
+		
+		try {
+			HttpURLConnection con = (HttpURLConnection) new URL(Httpurl).openConnection();
+			int re = con.getResponseCode();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+		
+		
+	}
+
+}

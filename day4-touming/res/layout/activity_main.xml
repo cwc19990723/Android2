@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout android:id="@+id/li_lie"
+        android:layout_width="wrap_content"                                                                                                                                            vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvoid:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+        
+        <SeekBar android:id="@+id/sk_shu"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="255"/>
+        
+        <TextView android:id="@+id/te_shu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_marginTop="6dp"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button android:id="@+id/bt_jia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增加"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"/>
+        
+        <Button android:id="@+id/bt_jian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="减少"
+            android:textSize="20sp"
+            android:layout_marginLeft="270dp"/>
+        
+    </LinearLayout>
+    
+    <ImageView android:id="@+id/im_tu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/zhong"/>
+
+</LinearLayout>

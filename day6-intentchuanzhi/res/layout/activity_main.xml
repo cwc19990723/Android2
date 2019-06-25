@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <EditText android:id="@+id/a_edname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入名字"/>
+    
+    <EditText android:id="@+id/a_edage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入年龄"/>
+    
+    <Button android:id="@+id/a_btfa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

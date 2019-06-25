@@ -1,0 +1,21 @@
+package com.example.day13_lxc3;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import android.graphics.Bitmap;
+
+public class Hppt {
+	
+	private static Bitmap urlToBitmap(String imgUrl){
+		try {
+			URL url = new URL(imgUrl);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+
+}

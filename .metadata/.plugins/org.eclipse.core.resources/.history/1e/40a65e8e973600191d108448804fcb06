@@ -1,0 +1,30 @@
+package com.example.zhou3;
+
+import bean.data;
+
+public class User {
+	
+	private data data;
+	
+	public User() {
+	}
+
+	public User(bean.data data) {
+		super();
+		this.data = data;
+	}
+
+	public data getData() {
+		return data;
+	}
+
+	public void setData(data data) {
+		this.data = data;
+	}
+
+	@Override
+	public String toString() {
+		return "User []";
+	}
+	
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">day_lian</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_b">MainActivity</string>
+    <string name="title_activity_jindutiao04">MainActivity</string>
+    <string name="title_activity_d">MainActivity</string>
+    <string name="title_activity_e">MainActivity</string>
+    <string name="title_activity_f">MainActivity</string>
+    <string name="title_activity_ff">MainActivity</string>
+    <string name="title_activity_g">MainActivity</string>
+    <string name="title_activity_touming">MainActivity</string>
+    <string name="title_activity_h">MainActivity</string>
+    <string name="title_activity_chuanzhi">Chuanzhi</string>
+    <string name="title_activity_chuan">Chuan</string>
+
+</resources>

@@ -1,0 +1,95 @@
+package com.example.day_14_sql;
+
+import java.util.ArrayList;
+
+import android.R.integer;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.TextView;
+
+public class MainActivity extends Activity implements OnClickListener {
+
+	private EditText a_name;
+	private EditText a_age;
+	private EditText a_sex;
+	private Button insert;
+	private Button select;
+	private Button delect;
+	private TextView tv;
+	private Button update;
+	private GridView gr;
+	private ArrayList<User> list;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		a_name = (EditText) findViewById(R.id.a_name);
+		a_age = (EditText) findViewById(R.id.a_age);
+		a_sex = (EditText) findViewById(R.id.a_sex);
+		insert = (Button) findViewById(R.id.a_insert);
+		select = (Button) findViewById(R.id.a_select);
+		delect = (Button) findViewById(R.id.a_delete);
+		update = (Button) findViewById(R.id.a_update);
+		tv = (TextView) findViewById(R.id.tv);
+		gr = (GridView) findViewById(R.id.gr);
+		
+		insert.setOnClickListener(this);
+		delect.setOnClickListener(this);
+		update.setOnClickListener(this);
+		select.setOnClickListener(this);
+		
+	}
+
+	@Override
+	public void onClick(View v) {
+		
+		String name = a_name.getText().toString();
+		String age = a_age.getText().toString();
+		String sex = a_sex.getText().toString();
+		
+		switch (v.getId()) {
+		case R.id.a_insert:
+			insert();
+			break;  
+		case R.id.a_delete:
+			new MySql(MainActivity.this).delete1(name);
+			break; 
+		case R.id.a_update:
+			new MySql(MainActivity.this).update(name, Integer.parseInt(age));
+			break; 
+		case R.id.a_select:
+			list = new MySql(MainActivity.this).select();
+			StringBuilder sb = new StringBuilder();
+			for (User ussser : list) {
+				sb.append(ussser.toString()+"\n");
+			}
+			MyAdapter adapter = new MyAdapter(list, MainActivity.this);
+			gr.setAdapter(adapter);
+			//tv.setText(sb.toString());
+  			break;
+
+		default:
+			break;
+		}
+	}
+	//≤Â»Î
+	private void insert() {
+		String name = a_name.getText().toString();
+		String age = a_age.getText().toString();
+		String sex = a_sex.getText().toString();
+		
+		new MySql(MainActivity.this).insert(new User(0, name,Integer.parseInt(age), sex));
+	}
+	
+	
+	
+}

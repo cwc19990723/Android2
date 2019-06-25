@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zuo"
+        android:layout_margin="10dp"/>
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"/>
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:textSize="20sp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"/>
+        
+    </LinearLayout>
+    
+    <TextView	 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="欢迎来到积云教育"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
+    
+    <EditText 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="用户名"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/juxing"/>
+    
+    <EditText 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="密码"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:background="@drawable/juxing"/>
+    
+    <Button 
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/juxing"/>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="记住密码"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="130dp"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+package com.example.zuoye1;
+
+public class datas {
+	
+	private String chapterName
+	private String envelopePic
+	private int publishTime;
+
+}

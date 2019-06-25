@@ -1,0 +1,48 @@
+package com.example.day13_lxc3;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
+public class Hppt {
+	
+	private static Bitmap urlToBitmap(String imgUrl){
+		try {
+			HttpURLConnection con = (HttpURLConnection) new URL(imgUrl).openConnection();
+			int ii = con.getResponseCode();
+			if(ii==200){
+				InputStream in = con.getInputStream();
+				
+				//将图片转为Bitmap对象
+				Bitmap de = BitmapFactory.decodeStream(in);
+				return de;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	//2.将url转换为字符串
+	public static String urlToString(String url){
+		try {
+			HttpURLConnection co = (HttpURLConnection) new URL(url).openConnection();
+			int iq = co.getResponseCode();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return url;
+		
+	}
+
+}

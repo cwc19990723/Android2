@@ -1,0 +1,61 @@
+package com.example.zhou3;
+
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.annotation.MainThread;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
+import bean.forecast;
+
+public class Listview extends Activity {
+	
+	Handler hand = new Handler(){
+		private ArrayList<forecast> list;
+		private MyAdapter adapter;
+
+		public void handleMessage(android.os.Message msg) {
+			list = (ArrayList<forecast>) msg.obj;
+			adapter = new MyAdapter(list, Listview.this);
+			lv.setAdapter(adapter);
+		};
+	};
+
+	private ListView lv;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_listview);
+		
+		lv = (ListView) findViewById(R.id.lv);
+		
+		new Thread(){
+			public void run() {
+				try {
+					URL url = new URL("http://t.weather.sojson.com/api/weather/city/101030100");
+					HttpURLConnection con = (HttpURLConnection) url.openConnection();
+					int code = con.getResponseCode();
+					if(code==200){
+						InputStream in = con.getInputStream();
+						StringBuffer sb = new StringBuffer();
+						byte [] by = new byte [1024];
+						int a  =0;
+					}
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			};
+		}.start();
+	}
+}

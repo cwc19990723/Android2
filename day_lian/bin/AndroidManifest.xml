@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.day_lian"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".BActivity"
+            android:label="@string/title_activity_b" >
+        </activity>
+        <activity
+            android:name=".Jindutiao04Activity"
+            android:label="@string/title_activity_jindutiao04" >
+        </activity>
+        <activity
+            android:name=".DActivity"
+            android:label="@string/title_activity_d" >
+        </activity>
+        <activity
+            android:name=".EActivity"
+            android:label="@string/title_activity_e" >
+        </activity>
+        <activity
+            android:name=".GActivity"
+            android:label="@string/title_activity_g" >
+        </activity>
+        <activity
+            android:name=".ToumingActivity"
+            android:label="@string/title_activity_touming" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HActivity"
+            android:label="@string/title_activity_h" >
+        </activity>
+        <activity
+            android:name=".Chuanzhi"
+            android:label="@string/title_activity_chuanzhi" >
+        </activity>
+        <activity
+            android:name=".Chuan"
+            android:label="@string/title_activity_chuan" >
+        </activity>
+    </application>
+
+</manifest>

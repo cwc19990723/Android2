@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">day_xue_xiangmu</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_denglu">Denglu</string>
+    <string name="title_activity_zhuce">Zhuce</string>
+    <string name="title_activity_listview">Listview</string>
+    <string name="title_activity_gerenxinxi">Gerenxinxi</string>
+    <string name="title_activity_shezhi">Shezhi</string>
+    <string name="title_activity_tiaojiebeijing">Tiaojiebeijing</string>
+    <string name="title_activity_gerenzhongxin">Gerenzhongxin</string>
+    <string name="title_activity_xiugaiziliao">Xiugaiziliao</string>
+    <string name="title_activity_yaoyiyao">Yaoyiyao</string>
+    <string name="title_activity_shoucang">Shoucang</string>
+
+</resources>

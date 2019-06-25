@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">zhou8</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_denglu">Denglu</string>
+    <string name="title_activity_">Activity</string>
+    <string name="title_activity_c">CActivity</string>
+
+</resources>

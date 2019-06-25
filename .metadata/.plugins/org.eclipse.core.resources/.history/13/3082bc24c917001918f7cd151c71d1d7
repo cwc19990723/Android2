@@ -1,0 +1,29 @@
+package com.example.dayzhou_sql4;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class MySql extends SQLiteOpenHelper{
+	private SQLiteDatabase mydb;
+
+	//有参构造
+	public MySql(Context context, String name, CursorFactory factory, int version) {
+		super(context, name, factory, version);
+		if(mydb==null){
+			mydb = getWritableDatabase();
+		}
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		
+	}
+
+}

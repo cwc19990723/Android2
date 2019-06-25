@@ -1,0 +1,44 @@
+package com.example.day_lianxi;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class BActivity extends Activity {
+
+	private EditText z_zh;
+	private EditText z_mm;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_b);
+		  //获取属性id
+		  z_zh = (EditText) findViewById(R.id.z_zh);
+		  z_mm = (EditText) findViewById(R.id.z_mm);
+		// 
+		Button z_zc = (Button) findViewById(R.id.z_zc);
+		// 个注册设置点击事件
+		z_zc.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				//跳转回前一个界面
+				Intent intent = new Intent(BActivity.this,MainActivity.class);
+				// 将获取的id转变为字符串
+				String zh = z_zh.getText().toString();
+				String mm = z_mm.getText().toString();
+				// 
+				intent.putExtra("zhanghao", zh);
+				intent.putExtra("mima", mm);
+				startActivity(intent);
+			}
+		});
+	}
+}

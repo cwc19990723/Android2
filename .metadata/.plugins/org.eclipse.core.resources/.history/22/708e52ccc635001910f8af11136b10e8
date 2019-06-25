@@ -1,0 +1,22 @@
+package com.example.lian_lian;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+public class Xiugai extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_xiugai);
+		
+		EditText up_name = (EditText) findViewById(R.id.up_name);
+		EditText up_age = (EditText) findViewById(R.id.up_age);
+		EditText up_sex = (EditText) findViewById(R.id.up_sex);
+		View ok = findViewById(R.id.up_ok);
+	}
+}

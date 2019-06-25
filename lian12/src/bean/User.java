@@ -1,0 +1,48 @@
+package bean;
+
+public class User {
+	
+	private data data;
+	private int errorCode;
+	private String errorMsg;
+	
+	public User() {
+	}
+
+	public User(bean.data data, int errorCode, String errorMsg) {
+		super();
+		this.data = data;
+		this.errorCode = errorCode;
+		this.errorMsg = errorMsg;
+	}
+
+	public data getData() {
+		return data;
+	}
+
+	public int getErrorCode() {
+		return errorCode;
+	}
+
+	public String getErrorMsg() {
+		return errorMsg;
+	}
+
+	public void setData(data data) {
+		this.data = data;
+	}
+
+	public void setErrorCode(int errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public void setErrorMsg(String errorMsg) {
+		this.errorMsg = errorMsg;
+	}
+
+	@Override
+	public String toString() {
+		return "User [errorCode=" + errorCode + ", errorMsg=" + errorMsg + "]";
+	}
+	
+}

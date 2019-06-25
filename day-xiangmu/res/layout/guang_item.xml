@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/guang_tu"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_launcher"
+         />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/guang_te1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx" />
+
+        <TextView
+            android:id="@+id/guang_te2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx" />
+
+        <TextView
+            android:id="@+id/guang_te3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx" />
+
+        <TextView
+            android:id="@+id/guang_te4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx" />
+
+        <TextView
+            android:id="@+id/guang_te5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx" />
+
+        <TextView
+            android:id="@+id/guang_te6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx" />
+    </LinearLayout>
+
+</LinearLayout>

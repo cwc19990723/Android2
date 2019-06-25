@@ -1,0 +1,51 @@
+package com.example.viewpager;
+
+import java.util.ArrayList;
+
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+import bean.datas;
+
+public class MySql extends SQLiteOpenHelper{
+
+	public MySql(Context context) {
+		super(context, "my.db", null, 1);
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		String sql = "create table ccc (id integer primary key autoincrement,envelopePic,title,superChapterName)";
+		db.execSQL(sql);
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		
+	}
+	
+	//≤Â»Î
+	public void insert(datas s){
+		String sql = "insert into ccc(envelopePic,title,superChapterName) values (?,?,?)";
+		SQLiteDatabase db = getWritableDatabase();
+		db.execSQL(sql,new Object[]{s.getEnvelopePic(),s.getTitle(),s.getSuperChapterName()});
+	}
+	
+	public ArrayList<datas> select(){
+		
+		String sql = "select * from ccc";
+		SQLiteDatabase db = getWritableDatabase();
+		Cursor query = db.rawQuery(sql, null);
+		ArrayList<datas> list = new ArrayList<datas>();
+		while (query.moveToNext()) {
+			String envelopePic = query.getString(query.getColumnIndex("envelopePic"));
+			String title = query.getString(query.getColumnIndex("title"));
+			String superChapterName = query.getString(query.getColumnIndex("superChapterName"));
+			list.add(new datas(envelopePic, title, superChapterName));
+		}
+		return list;
+	}
+
+}

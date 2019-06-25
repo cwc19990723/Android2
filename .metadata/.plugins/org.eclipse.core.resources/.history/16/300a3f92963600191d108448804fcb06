@@ -1,0 +1,29 @@
+package com.example.zhou3;
+
+public class User {
+	
+	private data data;
+	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public User(com.example.zhou3.data data) {
+		super();
+		this.data = data;
+	}
+
+	public data getData() {
+		return data;
+	}
+
+	public void setData(data data) {
+		this.data = data;
+	}
+
+	@Override
+	public String toString() {
+		return "User []";
+	}
+	
+}

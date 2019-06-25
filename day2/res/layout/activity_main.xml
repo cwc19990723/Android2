@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/skyblue_logo_douban_checked"
+        android:layout_margin="10dp"/>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zhi"
+        android:layout_centerInParent="true"/>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/weixin"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+    
+    <ImageView	android:id="@+id/im_zuoxia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/skyblue_logo_bluetooth_checked"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"/>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_margin="10dp"
+        android:layout_alignBottom="@id/im_zuoxia"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

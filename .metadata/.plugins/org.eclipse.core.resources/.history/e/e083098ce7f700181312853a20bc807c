@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <TextView	android:id="@+id/a_add"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:background="#1C5EDB"
+        android:text="页面" />
+    
+    <TextView android:id="@+id/a_fan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
+    <GridView	android:id="@+id/ib_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+package com.example.listview;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+public class Add extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_add);
+		
+		EditText add_zi1 = (EditText) findViewById(R.id.add_zi1);
+		EditText add_zi2 = (EditText) findViewById(R.id.add_zi2);
+		EditText add_zi3 = (EditText) findViewById(R.id.add_zi3);
+	}
+}

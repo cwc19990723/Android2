@@ -1,0 +1,43 @@
+package com.example.zhou3;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+
+public class Denglu extends Activity {
+
+	private Button dl_dl;
+	private Button dl_zc;
+	private EditText dl_zh;
+	private EditText dl_mm;
+	private CheckBox jzmm;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_denglu);
+		
+		dl_dl = (Button) findViewById(R.id.dl_dl);
+		dl_zc = (Button) findViewById(R.id.dl_zc);
+		dl_zh = (EditText) findViewById(R.id.dl_zh);
+		dl_mm = (EditText) findViewById(R.id.dl_mm);
+		jzmm = (CheckBox) findViewById(R.id.dl_jzmm);
+		
+		SharedPreferences sp = getSharedPreferences("user", MODE_PRIVATE);
+		boolean boolean1 = sp.getBoolean("issave", false);
+		if(boolean1){
+			String user = sp.getString("z", "");
+			String psw = sp.getString("m", "");
+			
+			dl_zh.setText(user);
+			dl_mm.setText(psw);
+		}
+		
+	}
+}

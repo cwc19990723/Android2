@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <TextView android:id="@+id/it_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="百度网址"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+    
+    <TextView android:id="@+id/it_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新浪网址"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+    
+    <TextView android:id="@+id/it_tv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="微博网址"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+    
+    <TextView android:id="@+id/it_tv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="谷歌网站"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

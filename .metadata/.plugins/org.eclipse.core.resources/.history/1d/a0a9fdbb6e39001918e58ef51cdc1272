@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <TextView android:id="@+id/sk_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="xun彭涛" />
+
+    <TextView android:id="@+id/sk_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="18" />
+    
+    <TextView android:id="@+id/sk_nan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="男" />
+    
+    <TextView android:id="@+id/sk_nv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="女" />
+    
+    <TextView android:id="@+id/sk_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="北小营" />
+    
+    <TextView android:id="@+id/sk_aihao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="篮球" />
+    
+    <RatingBar android:id="@+id/rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:progress="3"/>
+
+</LinearLayout>

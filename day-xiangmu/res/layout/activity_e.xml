@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button android:id="@+id/e_fanhui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="返回"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+        
+        <Button android:id="@+id/e_ziliao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="完善个人资料"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="10dp"/>
+        
+        
+    </LinearLayout>
+
+    <ImageView 
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/yuan"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/zhi"
+        android:layout_marginTop="10dp">
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="昵称 :xxx"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/as"
+            android:layout_alignParentRight="true"
+            android:padding="20dp"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/zhi"
+        android:layout_marginTop="10dp">
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="性别 :xxx"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/as"
+            android:layout_alignParentRight="true"
+            android:padding="20dp"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/zhi"
+        android:layout_marginTop="10dp">
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生日 :2000年1月12日"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/as"
+            android:layout_alignParentRight="true"
+            android:padding="20dp"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/zhi"
+        android:layout_marginTop="10dp">
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="用户等级 :三星用户"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/as"
+            android:layout_alignParentRight="true"
+            android:padding="20dp"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/zhi"
+        android:layout_marginTop="10dp">
+        
+        <TextView android:id="@+id/e_xiugai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改账号 :2000年1月12日"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/as"
+            android:layout_alignParentRight="true"
+            android:padding="20dp"/>
+        
+    </RelativeLayout>
+    
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">listview</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_zhuce">Zhuce</string>
+    <string name="title_activity_list_view">ListView</string>
+    <string name="title_activity_add">Add</string>
+    <string name="title_activity_update">Update</string>
+
+</resources>

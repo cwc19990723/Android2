@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Time</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_view_pager">ViewPager</string>
+    <string name="title_activity_pager">PagerActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_zhuce">ZhuceActivity</string>
+    <string name="title_activity_l">LActivity</string>
+
+</resources>

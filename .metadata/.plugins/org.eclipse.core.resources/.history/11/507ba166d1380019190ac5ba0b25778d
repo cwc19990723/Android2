@@ -1,0 +1,49 @@
+package com.example.viewpager;
+
+public class datas {
+	
+	private String envelopePic;
+	private String title;
+	private String superChapterName;
+	
+	public datas() {
+	}
+
+	public datas(String envelopePic, String title, String superChapterName) {
+		super();
+		this.envelopePic = envelopePic;
+		this.title = title;
+		this.superChapterName = superChapterName;
+	}
+
+	public String getEnvelopePic() {
+		return envelopePic;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public String getSuperChapterName() {
+		return superChapterName;
+	}
+
+	public void setEnvelopePic(String envelopePic) {
+		this.envelopePic = envelopePic;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public void setSuperChapterName(String superChapterName) {
+		this.superChapterName = superChapterName;
+	}
+
+	@Override
+	public String toString() {
+		return "datas [envelopePic=" + envelopePic + ", title=" + title + ", superChapterName=" + superChapterName
+				+ "]";
+	}
+	
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:drawable="@drawable/gir_1"
+        android:duration="200"/>
+    
+    <item android:drawable="@drawable/gir_2"
+        android:duration="200"/>
+    
+    <item android:drawable="@drawable/gir_3"
+        android:duration="200"/>
+    
+    <item android:drawable="@drawable/gir_4"
+        android:duration="200"/>
+    
+    <item android:drawable="@drawable/gir_5"
+        android:duration="200"/>
+    
+    <item android:drawable="@drawable/gir_6"
+        android:duration="200"/>
+    
+    <item android:drawable="@drawable/gir_7"
+        android:duration="200"/>
+    
+    <item android:drawable="@drawable/gir_8"
+        android:duration="200"/>
+
+</animation-list>

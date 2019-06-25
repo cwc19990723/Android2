@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageButton	android:id="@+id/tiaobeijing_anniutu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zuo"
+        android:layout_margin="10dp"/>
+    
+    <ImageView android:id="@+id/tiaobeijing_tu"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/zhong"
+        android:layout_centerInParent="true"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/tiaobeijing_tu"
+        android:layout_margin="20dp">
+        
+        <SeekBar android:id="@+id/tiaobeijing_sb"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="255"/>
+        
+        <TextView android:id="@+id/tiaobeijing_zi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_marginTop="6dp"/>
+        
+    </LinearLayout>
+    
+    <Button android:id="@+id/bg_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ok"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

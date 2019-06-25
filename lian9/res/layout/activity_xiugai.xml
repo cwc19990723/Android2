@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText	android:id="@+id/up_wangzhi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="请输入网址" />
+    
+    <EditText	android:id="@+id/up_riqi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入日期" />
+    
+    
+    <EditText	android:id="@+id/up_fengli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入风力" />
+    
+    
+    <EditText	android:id="@+id/up_fengxiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入风向" />
+    
+    
+    <EditText	android:id="@+id/up_gaowen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入高温" />
+    
+    
+    <EditText	android:id="@+id/up_diwen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入低温" />
+    
+    
+    <EditText	android:id="@+id/up_tianqi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入天气" />
+    
+    <Button android:id="@+id/up_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ok"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

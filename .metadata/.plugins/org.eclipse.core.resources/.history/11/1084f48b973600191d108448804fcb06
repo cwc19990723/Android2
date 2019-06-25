@@ -1,0 +1,32 @@
+package com.example.zhou3;
+
+import java.util.List;
+
+import com.example.zhou3.forecast;
+
+public class data {
+	
+	private List<forecast> forecast;
+	
+	public data() {
+	}
+
+	public data(List<com.example.zhou3.forecast> forecast) {
+		super();
+		this.forecast = forecast;
+	}
+
+	public List<forecast> getForecast() {
+		return forecast;
+	}
+
+	public void setForecast(List<forecast> forecast) {
+		this.forecast = forecast;
+	}
+
+	@Override
+	public String toString() {
+		return "data []";
+	}
+	
+}

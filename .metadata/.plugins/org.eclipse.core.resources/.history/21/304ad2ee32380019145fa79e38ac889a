@@ -1,0 +1,32 @@
+package com.example.zhou1;
+
+import java.util.List;
+
+import com.example.zhou1.data;
+
+public class result {
+	
+	private List<data> data;
+	
+	public result() {
+	}
+
+	public result(List<com.example.zhou1.data> data) {
+		super();
+		this.data = data;
+	}
+
+	public List<data> getData() {
+		return data;
+	}
+
+	public void setData(List<data> data) {
+		this.data = data;
+	}
+
+	@Override
+	public String toString() {
+		return "result []";
+	}
+	
+}

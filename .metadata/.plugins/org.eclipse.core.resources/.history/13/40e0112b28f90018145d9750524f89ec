@@ -1,0 +1,42 @@
+package com.example.day12_0;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		ImageView i_tu = (ImageView) findViewById(R.id.i_tu);
+		
+		String [] imgs = {
+			"http://192.168.1.14:8080/test1/timg1.jpg"	
+		};
+		
+		
+		Button i_an = (Button) findViewById(R.id.i_an);
+	}
+	
+	class ImageLoadTask extends AsyncTask<String, Void, Bitmap>{
+
+		@Override
+		protected Bitmap doInBackground(String... params) {
+			return null;
+		}
+		
+		
+		
+	}
+	
+	
+}

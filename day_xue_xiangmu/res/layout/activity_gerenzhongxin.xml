@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人中心"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"/>
+        
+        <TextView android:id="@+id/zhongxin_ziliao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="完善个人资料"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+        
+    </RelativeLayout>
+
+    <ImageView android:id="@+id/zhongxin_tu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hj"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+    
+    <TextView android:id="@+id/zhongxin_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="昵称"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/zhi"/>
+    
+    <TextView android:id="@+id/zhongxin_sex"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="性别"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/zhi"/>
+    
+    <TextView android:id="@+id/zhongxin_shengri"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="生日"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/zhi"/>
+    
+    <TextView android:id="@+id/zhongxin_dengji"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="用户等级"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/zhi"/>
+    
+    <TextView android:id="@+id/zhongxin_zh"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="修改账号"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/zhi"/>
+
+</LinearLayout>

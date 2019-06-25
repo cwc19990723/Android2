@@ -1,0 +1,21 @@
+package com.example.zhou6;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+public class Denglu extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_denglu);
+		
+		EditText dl_zh = (EditText) findViewById(R.id.dl_zh);
+		EditText dl_mm = (EditText) findViewById(R.id.dl_mm);
+		View dl = findViewById(R.id.dl_dl);
+	}
+}

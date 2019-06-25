@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText	android:id="@+id/ed_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入姓名" />
+    
+    <EditText android:id="@+id/ed_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入年龄" />
+    
+    <EditText	android:id="@+id/ed_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入性别" />
+    
+    <Button android:id="@+id/bt_insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="插入方法"/>
+    
+    <Button android:id="@+id/bt_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询方法"/>
+
+</LinearLayout>

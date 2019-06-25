@@ -1,0 +1,49 @@
+package com.example.time;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+
+public class LoginActivity extends Activity {
+
+	private EditText log_zh;
+	private EditText log_mm;
+	private CheckBox jzmm;
+	private Button dl;
+	private Button zc;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login);
+		
+		SharedPreferences sp = getSharedPreferences("user", MODE_PRIVATE);
+		boolean boolean1 = sp.getBoolean("issave", false);
+		if(boolean1){
+			String user = sp.getString("z", "");
+			String psw = sp.getString("z", "");
+			
+			log_zh.setText(user);
+			log_mm.setText(psw);
+		}
+		
+		initView();
+	}
+
+	private void initView() {
+		log_zh = (EditText) findViewById(R.id.log_zh);
+		log_mm = (EditText) findViewById(R.id.log_mm);
+		jzmm = (CheckBox) findViewById(R.id.log_jzmm);
+		dl = (Button) findViewById(R.id.log_dl);
+		zc = (Button) findViewById(R.id.log_zc);
+		
+		dl.setOnClickListener(this);
+		zc.setOnClickListener(this);
+	}
+}

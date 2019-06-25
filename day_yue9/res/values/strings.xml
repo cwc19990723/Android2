@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">day_yue9</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_zhuce">MainActivity</string>
+    <string name="title_activity_listview">MainActivity</string>
+    <string name="title_activity_update">MainActivity</string>
+    <string name="title_activity_add">MainActivity</string>
+
+</resources>

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        
+        <TextView	android:id="@+id/a_tv"
+        android:layout_width="0dp"
+        android:layout_weight="9"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/juxing"
+        android:text="我爱吃西瓜"
+        android:padding="10dp"
+        android:textSize="20sp"/>
+    
+    <Button android:id="@+id/a_update"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:text="修改"
+        android:background="@drawable/zhi"
+        android:layout_marginLeft="10dp"/>
+        
+    </LinearLayout>
+        
+</LinearLayout>

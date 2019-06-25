@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">day-xiangmu</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_b">MainActivity</string>
+    <string name="title_activity_c">MainActivity</string>
+    <string name="title_activity_d">MainActivity</string>
+    <string name="title_activity_e">MainActivity</string>
+    <string name="title_activity_f">MainActivity</string>
+    <string name="title_activity_fgai">MainActivity</string>
+    <string name="title_activity_yaoyiyao">MainActivity</string>
+    <string name="title_activity_tiaobeijing">MainActivity</string>
+    <string name="title_activity_ruanjianshiyong">MainActivity</string>
+    <string name="title_activity_shoucang">MainActivity</string>
+
+</resources>
